@@ -1,6 +1,6 @@
 # Experimental Analysis of Self-Balancing Search Trees
 
-This project is a comprehensive experimental framework, developed for the COMP0005 coursework, to analyze and compare the performance of three theoretically equivalent O(log n) search data structures: **Left-Leaning Red-Black (LLRB) Trees**, **Scapegoat Trees**, and **B-Trees**.
+This project is an experimental framework, developed for the COMP0005 Algorithms group coursework, to analyse and compare the performance of three theoretically equivalent O(log n) search data structures: **Left-Leaning Red-Black (LLRB) Trees**, **Scapegoat Trees**, and **B-Trees**.
 
 The framework is implemented in Python within a Jupyter Notebook and uses Matplotlib for data visualisation. It's designed to test these data structures under various conditions to reveal how their theoretical performance translates to real-world scenarios.
 
@@ -68,3 +68,9 @@ The entire framework, including the data structure implementations and plotting 
     * The `TestDataGenerator` class is then defined.
     * The `ExperimentalFramework` class contains the logic for running tests and plotting results.
     * The final cell executes the full suite of experiments. You can modify the parameters in this cell, such as `sampleSizeExponent`, to adjust the scale of the tests.
+
+## Contributors
+
+* William Stephen
+* Nemo Shu
+* Mariha Subhan
