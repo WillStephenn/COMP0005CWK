@@ -63,11 +63,7 @@ The entire framework, including the data structure implementations and plotting 
 
 1.  **Ensure you have a Python environment** with Jupyter, Matplotlib, and other standard libraries installed.
 2.  **Launch Jupyter Notebook** and open the `grp-29-0005code.ipynb` file.
-3.  **Run the cells sequentially**:
-    * The initial cells define the abstract interface and the three tree implementations (LLRB, B-Tree, Scapegoat).
-    * The `TestDataGenerator` class is then defined.
-    * The `ExperimentalFramework` class contains the logic for running tests and plotting results.
-    * The final cell executes the full suite of experiments. You can modify the parameters in this cell, such as `sampleSizeExponent`, to adjust the scale of the tests.
+3.  **Run the Tests** click 'Run All' 
 
 ## Contributors
 
