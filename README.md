@@ -24,23 +24,28 @@ The framework is built on four core components to ensure a robust and repeatable
 
 ---
 
-## Key Findings & Analysis
+## Summary of Key Findings & Analysis
 
 ### LLRB Tree Performance
 
 The LLRB Tree's insertion performance closely followed the expected **O(log n)** logarithmic curve. However, search performance was observed to be nearly **constant time**, rather than logarithmic. This suggests that for the tested data size, the search time is dominated by constant factors, likely due to the high efficiency of cache and branch prediction in modern CPUs, which makes the cost of traversing the shallow tree negligible.
 
+![LLRB Inserts Graph](Plots/mAvg/LLRBBST%20Tree%2C%20All%20Sample%20Variants%2C%20Inserts.png)
+![LLRBBST Tree Searches Graph](Plots/mAvg/LLRBBST%20Tree%2C%20All%20Sample%20Variants%2C%20Searches.png)
 
 ### Scapegoat Tree Parameter Tuning
 
 Experiments on the Scapegoat Tree's **alpha** parameter revealed that higher values (0.8-0.9) led to better performance for both insertions and searches. This is because a higher alpha tolerates more imbalance, which reduces the frequency of costly subtree rebuilding operations. This finding suggests that for many workloads, less frequent but larger rebalancing events are more efficient than constant, smaller adjustments.
 
+![Scapegoat Tree Alpha Comparison Searches Graph](Plots/mAvg/Scapegoat%20Tree%20Alpha%20Comparison%2C%20Random%20Samples%2C%20Searches.png)
+![Scapegoat Tree Alpha Comparison Inserts Graph](Plots/mAvg/Scapegoat%20Tree%20Alpha%20Comparison%2C%20Random%20Samples%2C%20Inserts.png)
 
 ### B-Tree Branching Factor and I/O Performance
 
 For in-memory operations, B-Trees with smaller branching factors performed better, as the linear search within each node is faster with fewer keys. While B-Tree searches were slower than the binary trees, their key strength was revealed in the theoretical I/O analysis. Due to their shallow height, B-Trees required an order of magnitude fewer disk I/O operations, making them vastly superior for datasets larger than available memory.
 
-
+![BTree Branching Factor Comparison Inserts Graph](Plots/mAvg/BTree%20Branching%20Factor%20Comparison%2C%20Random%20Samples%2C%20Inserts.png)
+![BTree Branching Factor Comparison Searches Graph](Plots/mAvg/BTree%20Branching%20Factor%20Comparison%2C%20Random%20Samples%2C%20Searches.png)
 ---
 
 ## Limitations & Future Work (Incorporating Feedback)
